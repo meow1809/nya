@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //гуглила примеры с extends и работу fetch
+        class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+
+    speak() {
+        console.log(this.name + " издаёт звук");
+    }
+}
+
+class Cat extends Animal {
+    speak() {
+        console.log(this.name + " говорит: Мяу");
+    }
+}
+
+class Dog extends Animal {
+    speak() {
+        console.log(this.name + " говорит: Гав");
+    }
+
+    fetch() {
+        console.log(this.name + " принёс палку");
+    }
+}
+
+const animals = [
+    new Animal("Животное"),
+    new Cat("Мурзик"),
+    new Cat("Барсик"),
+    new Dog("Шарик")
+];
+
+for (const animal of animals) {
+    animal.speak();
+}
+
+animals[3].fetch();
+    </script>
+</body>
+</html>
